@@ -47,13 +47,13 @@ openssl_make() {
 }
 
 openssl_make_win32() {
-	ms/do_nasm.bat
-	nmake -f ms/nt.mak
+	#ms/do_nasm.bat
+	nmake
 }
 
 openssl_make_win64() {
-	ms/do_win64a.bat
-	nmake -f ms/nt.mak
+	#ms/do_win64a.bat
+	nmake
 }
 
 openssl_install() {
@@ -61,7 +61,7 @@ openssl_install() {
 }
 
 openssl_install_win() {
-	nmake -f ms/nt.mak install
+	nmake install
 }
 
 openssl_enable() {
