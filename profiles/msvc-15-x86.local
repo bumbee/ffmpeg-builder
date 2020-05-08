@@ -7,17 +7,19 @@ TARGET_OS="win32"
 TOOLCHAIN="msvc"
 HOST="i686-w64-mingw32"
 
-VC_PATH="$VCINSTALLDIR/BIN"
-RC_PATH="$WindowsSdkDir/bin/x86"
+VC_PATH="${VCINSTALLDIR//\\//}/BIN"
+RC_PATH="${WindowsSdkDir//\\//}/bin/x86"
 CMAKE_PATH="/mingw32/bin"
 PERL_PATH=$(reg query "HKLM\\SOFTWARE\\Perl" -ve | sed -n -e "s/^.*REG_SZ //p")bin
-MSBUILD_PATH=$(reg query "HKLM\\SOFTWARE\\Microsoft\\MSBuild\\ToolsVersions\\$VisualStudioVersion" -v MSBuildToolsPath | sed -n -e "s/^.*REG_SZ //p")
+MSBUILD_PATH2=$(reg query "HKLM\\SOFTWARE\\Microsoft\\MSBuild\\ToolsVersions\\$VisualStudioVersion" -v MSBuildToolsPath | sed -n -e "s/^.*REG_SZ //p" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+MSBUILD_PATH=${MSBUILD_PATH2//\\//}
 
 PKG_CONFIG_PATH="$FF_PREFIX/lib/pkgconfig"
 CPPFLAGS="-I$FF_PREFIX/include"
 LDFLAGS="-LIBPATH:$FF_PREFIX/lib"
-PATH="$VC_PATH:$RC_PATH:$CMAKE_PATH:$PERL_PATH:$MSBUILD_PATH:$PATH"
+PATH="${VC_PATH//C://C}:${RC_PATH//C://C}:$CMAKE_PATH:$PERL_PATH:${MSBUILD_PATH//C://C}:$PATH"
 
+echo $PATH
 
 export PATH
 export HOST

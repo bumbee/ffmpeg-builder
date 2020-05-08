@@ -834,7 +834,7 @@ diff -ruN librtmp/Makefile.win32 librtmp/Makefile.win32
 +libdir=$(prefix)/lib
 +mandir=$(prefix)/man
 +
-+DLL_LIBS=ws2_32.lib winmm.lib gdi32.lib crypt32.lib User32.lib advapi32.lib libeay32.lib ssleay32.lib zlib.lib
++DLL_LIBS=ws2_32.lib winmm.lib gdi32.lib crypt32.lib User32.lib advapi32.lib libeay32.lib ssleay32.lib zlib.lib advapi32.lib
 +PRIVATE_LIBS=-lws2_32 -lwinmm -lgdi32 -luser32 -lcrypt32 -llibeay32 -lssleay32 -lzlib
 +CRYPTO_REQ=
 +PUBLIC_LIBS=
@@ -925,7 +925,7 @@ diff -ruN Makefile.win32 Makefile.win32
 +MANDIR=$(DESTDIR)$(mandir)
 +
 +CRYPTO_LIB=libeay32.lib ssleay32.lib
-+LIBS_SYS=ws2_32.lib winmm.lib gdi32.lib crypt32.lib User32.lib zlib.lib
++LIBS_SYS=ws2_32.lib winmm.lib gdi32.lib crypt32.lib User32.lib zlib.lib advapi32.lib
 +LIBRTMP=librtmp/librtmp.lib
 +LIBS=$(LIBRTMP) $(CRYPTO_LIB) $(LIBS_SYS) $(XLIBS)
 +

@@ -3,7 +3,8 @@ x264_dependencies() {
 }
 
 x264_fetch() {
-	do_git_checkout "git://git.videolan.org/x264.git" $1
+	#do_git_checkout "git://git.videolan.org/x264.git" $1
+	download_and_extract https://code.videolan.org/videolan/x264/-/archive/master/x264-master.tar.bz2 $1
 }
 
 x264_clean() {

@@ -4,7 +4,7 @@ ffmpeg_dependencies() {
 
 ffmpeg_fetch() {
 	#do_git_checkout https://github.com/FFmpeg/FFmpeg.git $1
-	download_and_extract http://ffmpeg.org/releases/ffmpeg-3.1.2.tar.bz2 $1
+	download_and_extract http://ffmpeg.org/releases/ffmpeg-3.4.5.tar.bz2 $1
 }
 
 ffmpeg_clean() {

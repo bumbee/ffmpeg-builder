@@ -3,7 +3,7 @@ zlib_dependencies() {
 }
 
 zlib_fetch() {
-	download_and_extract http://zlib.net/zlib-1.2.8.tar.gz $1
+	download_and_extract http://zlib.net/zlib-1.2.11.tar.gz $1
 }
 
 zlib_clean() {

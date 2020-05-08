@@ -3,7 +3,7 @@ openssl_dependencies() {
 }
 
 openssl_fetch() {
-	download_and_extract https://www.openssl.org/source/openssl-1.0.2h.tar.gz $1
+	download_and_extract https://www.openssl.org/source/openssl-1.1.1.tar.gz $1
 }
 
 openssl_clean() {
