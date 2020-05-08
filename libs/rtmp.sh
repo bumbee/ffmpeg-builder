@@ -7,7 +7,7 @@ rtmp_dependencies_win() {
 }
 
 rtmp_fetch() {
-	do_git_checkout "git://git.ffmpeg.org/rtmpdump" $1
+	do_git_checkout "https://github.com/JudgeZarbi/RTMPDump-OpenSSL-1.1.git" $1
 }
 
 rtmp_clean() {

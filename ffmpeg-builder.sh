@@ -274,7 +274,13 @@ install_library() {
 	# Resolve all dependencies recursively.
 	if [[ ! -z "$deps" ]]; then
 		for dep in ${deps[@]}; do
+			echo 'zlib, openssl' | grep -qw ${dep} 
+			if [ $? -eq 0 ] ; then
+			echo "skip-" $dep
+			else
+			echo "install-" $dep
 			install_library $dep
+			fi
 		done
 	fi
 

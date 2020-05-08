@@ -35,11 +35,11 @@ openssl_configure_mingw64() {
 }
 
 openssl_configure_win32() {
-	perl Configure VC-WIN32 --prefix=$FF_PREFIX
+	perl Configure VC-WIN32 --prefix=$FF_PREFIX --openssldir=$FF_PREFIX
 }
 
 openssl_configure_win64() {
-	perl Configure VC-WIN64A --prefix=$FF_PREFIX
+	perl Configure VC-WIN64A --prefix=$FF_PREFIX --openssldir=$FF_PREFIX
 }
 
 openssl_make() {
