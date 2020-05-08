@@ -23,7 +23,6 @@ ffmpeg_set_params() {
 		--pkg-config-flags=--static \
 		--disable-ffprobe \
 		--disable-ffserver \
-		--disable-debug \
 		--disable-doc \
 		--disable-static \
 		--enable-shared \
@@ -31,7 +30,6 @@ ffmpeg_set_params() {
 		--enable-version3 \
 		--enable-postproc \
 		--enable-runtime-cpudetect \
-		--enable-memalign-hack \
 		--enable-pic \
 		$options \
 		$FF_ENABLED_LIBS"
