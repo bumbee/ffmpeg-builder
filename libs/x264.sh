@@ -15,7 +15,7 @@ x264_set_params() {
 	local __resultvar=$1
 	local options=$2
 
-	add_host_and_prefix params "--enable-static --disable-opencl --disable-cli --enable-pic $options"
+	add_host_and_prefix params "--enable-shared --disable-opencl --disable-cli --enable-pic $options"
 
 	eval $__resultvar='$params'
 }
