@@ -36,11 +36,11 @@ x264_configure_win() {
 }
 
 x264_make() {
-	make
+	make IMPLIBNAME=libx264.lib
 }
 
 x264_install() {
-	make install
+	make IMPLIBNAME=libx264.lib install
 }
 
 x264_enable() {
