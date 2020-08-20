@@ -57,11 +57,11 @@ openssl_make_win64() {
 }
 
 openssl_install() {
-	make install
+	make install_sw install_ssldirs
 }
 
 openssl_install_win() {
-	nmake install
+	nmake install_sw install_ssldirs
 }
 
 openssl_enable() {

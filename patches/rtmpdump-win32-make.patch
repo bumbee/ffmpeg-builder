@@ -825,8 +825,8 @@ diff -ruN librtmp/Makefile.win32 librtmp/Makefile.win32
 +CRYPTO_DEF=-DUSE_OPENSSL
 +DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" $(CRYPTO_DEF) $(XDEF)
 +
-+CFLAGS  = -nologo -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -W3 -O2 -sdl- -MT $(DEF) $(XCFLAGS)
-+LDFLAGS = -nologo $(XLDFLAGS)
++CFLAGS  = -nologo -D_CRT_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -W3 -O2 -sdl- -MT $(DEF) $(XCFLAGS) -Zi
++LDFLAGS = -nologo $(XLDFLAGS) -DEBUG
 +ARFLAGS = -nologo
 +
 +incdir=$(prefix)/include/librtmp
@@ -912,8 +912,8 @@ diff -ruN Makefile.win32 Makefile.win32
 +
 +DEF=-DRTMPDUMP_VERSION=\"$(VERSION)\" -DUSE_OPENSSL $(XDEF)
 +
-+CFLAGS  = -nologo -DWIN32 -D_CRT_SECURE_NO_DEPRECATE -DHAVE_STRUCT_TIMESPEC -MT -O2 -W3 $(DEF) $(XCFLAGS)
-+LDFLAGS = -nologo $(XLDFLAGS)
++CFLAGS  = -nologo -DWIN32 -D_CRT_SECURE_NO_DEPRECATE -DHAVE_STRUCT_TIMESPEC -MT -O2 -W3 $(DEF) $(XCFLAGS) -Zi
++LDFLAGS = -nologo $(XLDFLAGS) -DEBUG
 +ARFLAGS = -nologo
 +
 +bindir=$(prefix)/bin

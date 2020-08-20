@@ -69,7 +69,7 @@ ffmpeg_configure_mingw() {
 }
 
 ffmpeg_configure_win() {
-	ffmpeg_set_params config "--toolchain=$TOOLCHAIN --extra-cflags=$CPPFLAGS --extra-ldflags=$LDFLAGS"
+	ffmpeg_set_params config "--target-os=$TARGET_OS --arch=$ARCH --toolchain=$TOOLCHAIN --extra-cflags=$CPPFLAGS --extra-ldflags=$LDFLAGS"
 
 	./configure $config
 }
