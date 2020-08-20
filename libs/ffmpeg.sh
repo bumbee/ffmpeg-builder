@@ -21,7 +21,6 @@ ffmpeg_set_params() {
 	add_prefix params "--arch=$ARCH \
 		--pkg-config=pkg-config \
 		--pkg-config-flags=--static \
-		--disable-ffprobe \
 		--disable-ffserver \
 		--disable-doc \
 		--disable-static \

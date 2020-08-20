@@ -11,7 +11,7 @@ openssl_clean() {
 }
 
 openssl_clean_win() {
-	nmake -f ms/nt.mak clean
+	nmake clean
 }
 
 openssl_configure() {
